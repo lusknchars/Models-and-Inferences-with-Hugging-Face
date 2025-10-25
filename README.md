@@ -1,6 +1,6 @@
 # 🤗 Loading Models and Inference with Hugging Face
 
-> **Laboratório prático** do curso IBM AI Engineering Professional Certificate
+> **Hands-on Lab** from IBM AI Engineering Professional Certificate
 
 [![IBM Skills Network](https://img.shields.io/badge/IBM-Skills_Network-052FAD?style=flat&logo=ibm)](https://www.ibm.com/training/)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
@@ -9,144 +9,144 @@
 
 ---
 
-## 📚 Sobre este Lab
+## 📚 About This Lab
 
-Este repositório contém exercícios práticos do **IBM AI Engineering Professional Certificate**, especificamente do módulo sobre carregamento de modelos e inferência usando a biblioteca Hugging Face Transformers.
+This repository contains practical exercises from the **IBM AI Engineering Professional Certificate**, specifically from the module on loading models and performing inference using the Hugging Face Transformers library.
 
-**⚠️ Importante:** Este é um laboratório guiado para fins educacionais, não um projeto original. O objetivo é aprender e praticar conceitos fundamentais de NLP com modelos pré-treinados.
-
----
-
-## 🎯 Objetivos de Aprendizado
-
-Neste laboratório, foram explorados os seguintes conceitos:
-
-### 1️⃣ **Inferência Manual (Baixo Nível)**
-- Carregamento manual de modelos e tokenizers
-- Pré-processamento de texto (tokenização)
-- Execução de inferência com `torch.no_grad()`
-- Processamento de logits e saídas do modelo
-- Decodificação de resultados
-
-### 2️⃣ **Pipeline API (Alto Nível)**
-- Uso da função `pipeline()` do Hugging Face
-- Simplificação de tarefas de NLP com poucas linhas de código
-- Comparação entre abordagens manual vs. automatizada
+**⚠️ Important:** This is a guided laboratory for educational purposes, not an original project. The goal is to learn and practice fundamental NLP concepts with pre-trained models.
 
 ---
 
-## 🧪 Tarefas Implementadas
+## 🎯 Learning Objectives
+
+In this laboratory, the following concepts were explored:
+
+### 1️⃣ **Manual Inference (Low-Level Approach)**
+- Manual loading of models and tokenizers
+- Text preprocessing (tokenization)
+- Running inference with `torch.no_grad()`
+- Processing logits and model outputs
+- Decoding results
+
+### 2️⃣ **Pipeline API (High-Level Approach)**
+- Using Hugging Face's `pipeline()` function
+- Simplifying NLP tasks with just a few lines of code
+- Comparing manual vs. automated approaches
+
+---
+
+## 🧪 Implemented Tasks
 
 ### **Text Classification (Sentiment Analysis)**
-- **Modelo:** `distilbert-base-uncased-finetuned-sst-2-english`
-- **Tarefa:** Classificação de sentimentos (POSITIVE/NEGATIVE)
-- **Implementação:** Manual + Pipeline
+- **Model:** `distilbert-base-uncased-finetuned-sst-2-english`
+- **Task:** Sentiment classification (POSITIVE/NEGATIVE)
+- **Implementation:** Manual + Pipeline
 
 ### **Text Generation**
-- **Modelo:** `gpt2`
-- **Tarefa:** Geração de texto a partir de um prompt
-- **Implementação:** Manual + Pipeline
+- **Model:** `gpt2`
+- **Task:** Text generation from a prompt
+- **Implementation:** Manual + Pipeline
 
 ### **Language Detection**
-- **Modelo:** `papluca/xlm-roberta-base-language-detection`
-- **Tarefa:** Detecção de idioma de textos
-- **Implementação:** Pipeline
+- **Model:** `papluca/xlm-roberta-base-language-detection`
+- **Task:** Language detection for text inputs
+- **Implementation:** Pipeline
 
 ### **Translation (Text-to-Text)**
-- **Modelo:** `t5-small`
-- **Tarefa:** Tradução de inglês para francês
-- **Implementação:** Pipeline
+- **Model:** `t5-small`
+- **Task:** Translation from English to French
+- **Implementation:** Pipeline
 
 ### **Fill-Mask**
-- **Modelo:** `bert-base-uncased`
-- **Tarefa:** Preenchimento de tokens mascarados
-- **Implementação:** Pipeline
+- **Model:** `bert-base-uncased`
+- **Task:** Filling in masked tokens
+- **Implementation:** Pipeline
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-| Tecnologia | Versão | Propósito |
-|------------|--------|-----------|
-| **Python** | 3.12 | Linguagem de programação |
-| **PyTorch** | 2.3.1 | Framework de deep learning |
-| **Transformers** | 4.40.0 | Biblioteca de modelos pré-treinados |
-| **Torchvision** | 0.18.0 | Utilitários de visão computacional |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Python** | 3.12 | Programming language |
+| **PyTorch** | 2.3.1 | Deep learning framework |
+| **Transformers** | 4.40.0 | Pre-trained models library |
+| **Torchvision** | 0.18.0 | Computer vision utilities |
 
 ---
 
-## 📦 Instalação
+## 📦 Installation
 
-### Requisitos
+### Requirements
 ```bash
 pip install torch~=2.3.1
 pip install torchvision~=0.18.0
 pip install transformers~=4.40.0
 ```
 
-### Executar o Notebook
+### Running the Notebook
 ```bash
 jupyter notebook Loading_Models_and_Inference_with_Hugging_Face.ipynb
 ```
 
 ---
 
-## 📖 Estrutura do Notebook
+## 📖 Notebook Structure
 
 ```
-1. Setup e Instalação de Bibliotecas
-2. Text Classification com DistilBERT
-   ├── Carregamento manual do modelo
-   ├── Pré-processamento do texto
-   ├── Inferência e processamento de saídas
-   └── Implementação com pipeline()
-3. Text Generation com GPT-2
-   ├── Carregamento manual do modelo
-   ├── Geração de texto passo a passo
-   └── Implementação com pipeline()
+1. Setup and Library Installation
+2. Text Classification with DistilBERT
+   ├── Manual model loading
+   ├── Text preprocessing
+   ├── Inference and output processing
+   └── Implementation with pipeline()
+3. Text Generation with GPT-2
+   ├── Manual model loading
+   ├── Step-by-step text generation
+   └── Implementation with pipeline()
 4. Hugging Face Pipeline API
    ├── Text Classification
    ├── Language Detection
    ├── Text Generation (T5)
    └── Fill-Mask (BERT)
-5. Exercício Prático: Fill-Mask
+5. Practical Exercise: Fill-Mask
 ```
 
 ---
 
-## 💡 Principais Aprendizados
+## 💡 Key Learnings
 
-### **Abordagem Manual vs. Pipeline**
+### **Manual Approach vs. Pipeline**
 
-| Aspecto | Manual | Pipeline |
-|---------|--------|----------|
-| **Código** | ~15-20 linhas | 3-5 linhas |
-| **Controle** | Total | Limitado |
-| **Flexibilidade** | Alta | Média |
-| **Facilidade** | Requer conhecimento | Muito fácil |
-| **Uso recomendado** | Produção customizada | Prototipagem rápida |
+| Aspect | Manual | Pipeline |
+|--------|--------|----------|
+| **Code** | ~15-20 lines | 3-5 lines |
+| **Control** | Full | Limited |
+| **Flexibility** | High | Medium |
+| **Ease of use** | Requires knowledge | Very easy |
+| **Recommended use** | Custom production | Rapid prototyping |
 
-### **Quando usar cada abordagem?**
+### **When to use each approach?**
 
-✅ **Use `pipeline()` quando:**
-- Prototipando rapidamente
-- Tarefas comuns de NLP
-- Simplicidade é prioridade
-- Deploy rápido
+✅ **Use `pipeline()` when:**
+- Rapid prototyping
+- Common NLP tasks
+- Simplicity is priority
+- Quick deployment
 
-✅ **Use abordagem manual quando:**
-- Precisa de controle fino
-- Otimização de performance
-- Tarefas customizadas
-- Integração complexa
+✅ **Use manual approach when:**
+- Fine-grained control needed
+- Performance optimization
+- Custom tasks
+- Complex integration
 
 ---
 
-## 🔍 Exemplos de Código
+## 🔍 Code Examples
 
-### Text Classification (Sentimento)
+### Text Classification (Sentiment)
 
-**Abordagem Manual:**
+**Manual Approach:**
 ```python
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 import torch
@@ -164,7 +164,7 @@ logits = outputs.logits
 predicted_class = torch.argmax(logits, dim=-1).item()
 ```
 
-**Com Pipeline:**
+**With Pipeline:**
 ```python
 from transformers import pipeline
 
@@ -176,67 +176,67 @@ print(result)
 
 ---
 
-## 📊 Resultados e Observações
+## 📊 Results and Observations
 
-### **Performance dos Modelos**
+### **Model Performance**
 
-- **DistilBERT:** Alta acurácia em classificação de sentimentos, rápido
-- **GPT-2:** Geração coerente, porém com repetições ocasionais
-- **T5:** Excelente para tarefas de tradução
-- **BERT:** Ótimo para fill-mask e MLM tasks
+- **DistilBERT:** High accuracy in sentiment classification, fast
+- **GPT-2:** Coherent generation, but with occasional repetitions
+- **T5:** Excellent for translation tasks
+- **BERT:** Great for fill-mask and MLM tasks
 
-### **Comparação de Eficiência**
+### **Efficiency Comparison**
 
-| Tarefa | Tempo Manual | Tempo Pipeline | Linhas de Código (Manual) | Linhas de Código (Pipeline) |
-|--------|--------------|----------------|---------------------------|----------------------------|
-| Classificação | ~2-3s | ~1-2s | 15-20 | 3-5 |
-| Geração | ~3-5s | ~2-3s | 20-25 | 3-5 |
-| Tradução | N/A | ~2-3s | N/A | 3-5 |
+| Task | Manual Time | Pipeline Time | Lines of Code (Manual) | Lines of Code (Pipeline) |
+|------|-------------|---------------|------------------------|--------------------------|
+| Classification | ~2-3s | ~1-2s | 15-20 | 3-5 |
+| Generation | ~3-5s | ~2-3s | 20-25 | 3-5 |
+| Translation | N/A | ~2-3s | N/A | 3-5 |
 
 ---
 
-## 🎓 Certificação
+## 🎓 Certification
 
-Este laboratório faz parte do **IBM AI Engineering Professional Certificate** oferecido via IBM Skills Network / Coursera.
+This laboratory is part of the **IBM AI Engineering Professional Certificate** offered via IBM Skills Network / Coursera.
 
-**Tópicos do Curso:**
-- Machine Learning com Python
-- Deep Learning e Neural Networks
+**Course Topics:**
+- Machine Learning with Python
+- Deep Learning and Neural Networks
 - Computer Vision
 - Natural Language Processing
-- Generative AI e LLMs
+- Generative AI and LLMs
 
 ---
 
-## 📝 Notas Importantes
+## 📝 Important Notes
 
-1. **Requisitos de Hardware:** Alguns modelos podem requerer GPU para execução otimizada
-2. **Tempo de Download:** Primeira execução baixa os modelos (pode levar minutos)
-3. **Warnings:** Warnings sobre weights não utilizados são normais para modelos fine-tuned
-4. **Versões:** Testado com Python 3.12 e bibliotecas especificadas
+1. **Hardware Requirements:** Some models may require GPU for optimized execution
+2. **Download Time:** First execution downloads models (may take minutes)
+3. **Warnings:** Warnings about unused weights are normal for fine-tuned models
+4. **Versions:** Tested with Python 3.12 and specified libraries
 
 ---
 
-## 🔗 Recursos Adicionais
+## 🔗 Additional Resources
 
-- [Documentação Hugging Face Transformers](https://huggingface.co/docs/transformers)
+- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers)
 - [Hugging Face Model Hub](https://huggingface.co/models)
 - [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
 - [IBM Skills Network](https://skills.network/)
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-Este material é parte do conteúdo educacional da IBM e é usado apenas para fins de aprendizado.
+This material is part of IBM's educational content and is used for learning purposes only.
 
 ---
 
-## ✍️ Autor
+## ✍️ Author
 
-Desenvolvido como parte dos estudos para a **IBM AI Engineering Professional Certificate**
+Completed as part of the **IBM AI Engineering Professional Certificate** studies
 
-**Contexto:** Laboratório guiado - Exercício de aprendizado, não projeto original
+**Context:** Guided laboratory - Learning exercise, not an original project
 
 ---
 
